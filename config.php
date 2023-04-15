@@ -18,7 +18,7 @@ return [
         ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'sqlite:@micro/database.sqlite',
+            'dsn' => '',
         ],
     ],
 ];
