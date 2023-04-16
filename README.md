@@ -1,6 +1,6 @@
-Niniejszy plik _README_ został przetłumaczony na język polski dla wygody użytkowników. Jednak wszystkie strony internetowe, do których odnośniki zawiera, są w języku angielskim. Również [plik licencji](LICENSE.md) jest po angielsku. Przynajmniej podstawowa znajomość języka angielskiego jest niezbędna, by zainstalować i korzystać z tego pakietu.
+Niniejszy plik _README_ został przetłumaczony na język polski dla wygody użytkowników. Jednak wszystkie strony internetowe, do których odnośniki zawiera, są w języku angielskim. [Licencja](LICENSE.md) też jest po angielsku. Przynajmniej podstawowa znajomość języka angielskiego jest niezbędna, by zainstalować i korzystać z tego pakietu.
 
-(_This README file has been translated into Polish for the convenience of users. However, all websites it links to are in English. [plik licencji](LICENSE.md) file is also in English. At least a basic knowledge of English is required to install and use this package_)
+(_The README file has been translated into Polish for the convenience of users. However, all websites it links to are in English. [License file](LICENSE.md)  is also in English. At least a basic knowledge of English is required to install and use of this package_)
 
 <p align="center">
     <img src="https://avatars.githubusercontent.com/u/130758995?s=210&u=bf8fc37c7efd14d4555f54879cf1869bbc542937&v=4">
@@ -25,7 +25,7 @@ Dodatkowym założeniem jest, żeby wszystko było zbudowane na _one-linerze_, c
 
 Poniższe komponenty są wymagane i muszą zostać zainstalowane (jeśli już ich nie posiadasz):
 
-1. Lokalny serwer webowy typu LAMP. [XAMPP](https://www.apachefriends.org/index.html) jest polecany. Ewentualnie ręcznie zainstalowany interpreter języka PHP.
+1. Lokalny serwer webowy typu LAMP. [XAMPP](https://www.apachefriends.org/index.html) jest polecany. Ewentualnie samodzielny interpreter języka PHP.
 2. System kontroli zależności [Composer](http://getcomposer.org/).
 3. [Git dla Windows](https://gitforwindows.org/).
 4. Dowolna przeglądarka internetowa we w miarę nowej wersji.
@@ -38,11 +38,11 @@ Rozwiązanie było testowane wyłącznie w systemie **Windows 11 Pro**, pod kont
 
 Jeśli nie posiadasz zainstalowanego [XAMPPa](https://www.apachefriends.org/index.html), lub dowolnego innego pakietu serwerowego typu LAMP, możesz pobrać i zainstalować go ze strony internetowej [ApacheFriends.org](https://www.apachefriends.org/download.html).
 
-Jeśli wybierzesz gałąź 8.1 lub 8.0, konieczne będzie `--ignore-platform-req=php` flag with Composer, as described below and [in here](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
+Jeśli wybierzesz gałąź 8.1 lub 8.0, konieczne będzie użycie flagi `--ignore-platform-req=php` przy korzystaniu z Composera, jak to opisano poniżej i [tutaj](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
 
 ### Git for Windows
 
-Jeśli nie masz zainstalowanego [Git for Windows](https://gitforwindows.org/) lub dowolnej innej wersji gita, możesz pobrać go i zainstalować z ich [strony głównej](https://gitforwindows.org/).
+Jeśli nie masz jeszcze [Git for Windows](https://gitforwindows.org/) lub innej wersji gita, możesz pobrać go z ich [strony głównej](https://gitforwindows.org/).
 
 ### Composer
 
@@ -90,7 +90,7 @@ Na coś takiego:
 
 (kod base64 musi być wklejony w _jednej linijce_)
 
-Zapisz zmiany w pliku `views/site/index.php`, wróć do przeglądarki i odśwież stronę `http://localhost:8080`, by zobaczyć efekty.
+Zapisz zmiany w pliku `views/site/index.php`, wróć do przeglądarki i odśwież stronę [`http://localhost:8080`](http://localhost:8080).
 
 ## PRZYKŁAD
 
@@ -108,6 +108,8 @@ Czyli kompletne bagno.
 
 Przykładowa strona WWW (powyżej) jest oparta na [Pure](https://purecss.io/).
 
-Użyty został przykład z folderu [`pure/site/static/layouts/side-menu/`](https://github.com/pure-css/pure/tree/master/site/static/layouts/side-menu). Dokonano jedynie drobnej zmiany, polegającej na tym, że każdy wymagany zewnętrzny plik został osadzony bezpośrednio w pliku [`index.html`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/source/side-menu-oneliner/index.html). Zawartość gotowego pliku została następnie zakodowana (przy użyciu [Base64 Converter](https://base64.guru/converter)) i umieszczona w pliku [`views\site\index.php`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/views/site/index.php).
+Wykorzystano przykład z folderu [`pure/site/static/layouts/side-menu/`](https://github.com/pure-css/pure/tree/master/site/static/layouts/side-menu). Dokonano jedynie zmiany, polegającej na tym, że każdy wymagany zewnętrzny plik został osadzony bezpośrednio w pliku [`index.html`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/source/side-menu-oneliner/index.html).
 
-Wykorzystane źródła (zarówno wersja oryginalna, jak i przerobiona do _jedno-linijkowca_) znajdują się w folderze [`source`](https://github.com/telecare-poland/test-algorytmu-base64/tree/main/source) w tym repozytorium.
+Treść strony została następnie zakodowana (przy użyciu [Base64 Converter](https://base64.guru/converter)) i umieszczona w pliku [`views\site\index.php`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/views/site/index.php).
+
+Wykorzystane źródła (wersja oryginalna i przerobiona do _jedno-linijkowca_) są w folderze [`source`](https://github.com/telecare-poland/test-algorytmu-base64/tree/main/source) w tym repozytorium.
