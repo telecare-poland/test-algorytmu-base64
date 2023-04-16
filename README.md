@@ -1,97 +1,113 @@
+Niniejszy plik _README_ został przetłumaczony na język polski dla wygody użytkowników. Jednak wszystkie strony internetowe, do których odnośniki zawiera, są w języku angielskim. Również [plik licencji](LICENSE.md) jest po angielsku. Przynajmniej podstawowa znajomość języka angielskiego jest niezbędna, by zainstalować i korzystać z tego pakietu.
+
+(_This README file has been translated into Polish for the convenience of users. However, all websites it links to are in English. [plik licencji](LICENSE.md) file is also in English. At least a basic knowledge of English is required to install and use this package_)
+
 <p align="center">
-    <h1 align="center">Pseudo PHP Encoder</h1>
+    <img src="https://avatars.githubusercontent.com/u/130758995?s=210&u=bf8fc37c7efd14d4555f54879cf1869bbc542937&v=4">
+    <h1 align="center">Pseudo-Enkoder PHP</h1>
 </p>
 
-Inspired with the idea behind [IonCube / PHP Encoder 12](https://www.ioncube.com/php_encoder.php?page=pricing) and seeing how [Adminer](https://www.adminer.org/en/)'s main file is (partially) encoded, I have came up with the idea of doing the same using [Yii 2 Micro Framework](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-yii-as-micro-framework) and [LZ-based compression algorithm for JavaScript](https://github.com/pieroxy/lz-string/).
+Inspiracja:
 
-## REQUIREMENTS
+- [IonCube / PHP Encoder 12](https://www.ioncube.com/php_encoder.php?page=pricing), 
+- [Adminer](https://www.adminer.org/en/) (częściowe kodowanie głównego pliku)
 
-Any of these components are required (if you don't have them already installed):
+Pomysł wykorzystuje:
 
-1. Web server, any kind of LAMP-like package like [XAMPP](https://www.apachefriends.org/index.html). Or manually installed PHP interpreter
-2. [Composer](http://getcomposer.org/)
-3. [Git for Windows](https://gitforwindows.org/)
-4. A web browser in a kind of new version?
+- [Yii 2 Micro Framework](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-yii-as-micro-framework) 
+- oraz bibliotekę [LZ-based compression algorithm for JavaScript](https://github.com/pieroxy/lz-string/).
 
-This was tested under **Windows 11 Pro** and **PHP 8.2.x** only.
+Idea polega na tym, by przeglądarka wyświetlała użytkownikowi w pełni funkcjonalną stronę WWW (z pełnym stylowaniem opartym o CSS i działającą logiką, opartą na JavaScript), jednocześnie zawierając "bagno" w kodzie źródłowym.
 
-## INSTALLATION
+Dodatkowym założeniem jest, żeby wszystko było zbudowane na _one-linerze_, czyli zawarte w jednym pliku.
 
-### Install XAMPP
+## WYMAGANIA
 
-If you do not have [XAMPP](https://www.apachefriends.org/index.html) or any other LAMP-like package, you can download and install it from [ApacheFriends.org](https://www.apachefriends.org/download.html) website.
+Poniższe komponenty są wymagane i muszą zostać zainstalowane (jeśli już ich nie posiadasz):
 
-If you pick branch 8.1 or 8.0, you'll have to use the `--ignore-platform-req=php` flag with Composer, as described below and [in here](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
+1. Lokalny serwer webowy typu LAMP. [XAMPP](https://www.apachefriends.org/index.html) jest polecany. Ewentualnie ręcznie zainstalowany interpreter języka PHP.
+2. System kontroli zależności [Composer](http://getcomposer.org/).
+3. [Git dla Windows](https://gitforwindows.org/).
+4. Dowolna przeglądarka internetowa we w miarę nowej wersji.
 
-### Install Git for Windows
+Rozwiązanie było testowane wyłącznie w systemie **Windows 11 Pro**, pod kontrolą **PHP 8.2.4**.
 
-If you do not have [Git for Windows](https://gitforwindows.org/) or any other version of git already installer, you can download and install it from [their homepage](https://gitforwindows.org/).
+## Instalacja
 
-### Install Composer
+### XAMPP
 
-If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix) website.
+Jeśli nie posiadasz zainstalowanego [XAMPPa](https://www.apachefriends.org/index.html), lub dowolnego innego pakietu serwerowego typu LAMP, możesz pobrać i zainstalować go ze strony internetowej [ApacheFriends.org](https://www.apachefriends.org/download.html).
 
-### Get this project via Composer
+Jeśli wybierzesz gałąź 8.1 lub 8.0, konieczne będzie `--ignore-platform-req=php` flag with Composer, as described below and [in here](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
 
-You can then install this project template using the following command:
+### Git for Windows
+
+Jeśli nie masz zainstalowanego [Git for Windows](https://gitforwindows.org/) lub dowolnej innej wersji gita, możesz pobrać go i zainstalować z ich [strony głównej](https://gitforwindows.org/).
+
+### Composer
+
+Jeśli nie posiadasz [Composera](http://getcomposer.org/), instrukcje instalacji znajdziesz na stronie WWW
+ [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
+
+### Pobierz projekt przy pomocy Gita i Composer
+
+Wykonaj poniższe polecenia w konsoli Windows:
 
 ~~~
-git clone git@github.com:telecare-poland/test-algorytmu-lzf.git
+git clone git@github.com:telecare-poland/test-algorytmu-base64.git
 composer update --ignore-platform-req=php
 ~~~
 
-The `--ignore-platform-req=php` flag must only be used, if you are [using PHP 8.2 or newer](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
+Flaga `--ignore-platform-req=php` musi być użyta tylko, jeśli masz zainstalowane [PHP w wersji 8.2 lub nowszej](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
 
-## RUNNING
+## URUCHOMIENIE
 
-Start your favorite local web server or the server bundled with PHP
+Uruchom swój serwer lokalny lub wykorzystaj serwer wbudowany w PHP:
 
 ~~~
-cd htdocs/test-algorytmu-lzf
+cd htdocs/test-algorytmu-base64
 php yii serve
 ~~~
 
-Then open up your web browser and navigate it to `http://localhost:8080` address.
+Następnie uruchom wybraną przeglądarkę i przejdź pod adres [`http://localhost:8080`](http://localhost:8080).
 
-CONFIGURATION
--------------
+## KONFIGURACJA
 
-1. Visit some [Base64 Converter](https://base64.guru/converter) for example `https://base64.guru/converter`.
-2. Paste any kind of HTML code into it and convert it to Base64.
-3. Edit the `views/site/index.php` file and replace **entire content of it** with the generated string.
+1. Otwórz stronę dowolnego konwertera base64, np. [Base64 Converter](https://base64.guru/converter).
+2. Wkej dowolny kod HTML i dokonaj jego konwersji na base64.
+3. Zamień **całą zawartość** pliku `views/site/index.php` na wygenerowany łańcuch tekstowy.
 
-For example, turn this:
+Na przykład, zamień takie coś:
 
     <h2>Base64 Converter</h2>
     <h3>The Base64 online converter supports both functions of the algorithm on same page. If you need to encode a text to Base64, fill in the Text field and press Encode text to Base64 -- the result will appear in the Base64 field. Otherwise, if you have a Base64 string, paste it into the Base64 field and press Decode Base64 to text -- the result will appear in the Text field.<h3>
     <h2>About Base64 online converter</h2>
     <h3>Please note that this Base64 converter supports only main standard and decodes the data in strict mode. Perhaps this option does not suit your needs, and you want to encode text or decode Base64 using other variations of this algorithm. If so, please check the following online convertors. They are also simple and free, but they are sharpened for certain tasks.<h3>
 
-Into this:
+Na coś takiego:
 
     PGgxPkJhc2U2NCBDb252ZXJ0ZXI8L2gyPg0KPGgzPlRoZSBCYXNlNjQgb25saW5lIGNvbnZlcnRlciBzdXBwb3J0cyBib3RoIGZ1bmN0aW9ucyBvZiB0aGUgYWxnb3JpdGhtIG9uIHNhbWUgcGFnZS4gSWYgeW91IG5lZWQgdG8gZW5jb2RlIGEgdGV4dCB0byBCYXNlNjQsIGZpbGwgaW4gdGhlIFRleHQgZmllbGQgYW5kIHByZXNzIEVuY29kZSB0ZXh0IHRvIEJhc2U2NCAtLSB0aGUgcmVzdWx0IHdpbGwgYXBwZWFyIGluIHRoZSBCYXNlNjQgZmllbGQuIE90aGVyd2lzZSwgaWYgeW91IGhhdmUgYSBCYXNlNjQgc3RyaW5nLCBwYXN0ZSBpdCBpbnRvIHRoZSBCYXNlNjQgZmllbGQgYW5kIHByZXNzIERlY29kZSBCYXNlNjQgdG8gdGV4dCAtLSB0aGUgcmVzdWx0IHdpbGwgYXBwZWFyIGluIHRoZSBUZXh0IGZpZWxkLjxoMz4NCjxoMj5BYm91dCBCYXNlNjQgb25saW5lIGNvbnZlcnRlcjwvaDI+DQo8aDM+UGxlYXNlIG5vdGUgdGhhdCB0aGlzIEJhc2U2NCBjb252ZXJ0ZXIgc3VwcG9ydHMgb25seSBtYWluIHN0YW5kYXJkIGFuZCBkZWNvZGVzIHRoZSBkYXRhIGluIHN0cmljdCBtb2RlLiBQZXJoYXBzIHRoaXMgb3B0aW9uIGRvZXMgbm90IHN1aXQgeW91ciBuZWVkcywgYW5kIHlvdSB3YW50IHRvIGVuY29kZSB0ZXh0IG9yIGRlY29kZSBCYXNlNjQgdXNpbmcgb3RoZXIgdmFyaWF0aW9ucyBvZiB0aGlzIGFsZ29yaXRobS4gSWYgc28sIHBsZWFzZSBjaGVjayB0aGUgZm9sbG93aW5nIG9ubGluZSBjb252ZXJ0b3JzLiBUaGV5IGFyZSBhbHNvIHNpbXBsZSBhbmQgZnJlZSwgYnV0IHRoZXkgYXJlIHNoYXJwZW5lZCBmb3IgY2VydGFpbiB0YXNrcy48aDM+
 
-(one line only, please)
+(kod base64 musi być wklejony w _jednej linijce_)
 
-Now, go back to your borwser and refresh the `http://localhost:8080` URL to see the effects.
+Zapisz zmiany w pliku `views/site/index.php`, wróć do przeglądarki i odśwież stronę `http://localhost:8080`, by zobaczyć efekty.
 
-## EXAMPLE
+## PRZYKŁAD
 
-If everything runs as expected, you should see a webpage close to the below one:
+Jeśli wszystko poszło zgodnie z planem, w przeglądarce powinna pojawić się przykładowa strona WWW:
 
-![My Image](README-effect.jpg)
+![Wynik działania](README-effect.jpg)
 
-This is a fully-featured website (that uses HTML, CSS and JS) even though, if you press <kbd>Ctrl</kbd>+<kbd>U</kbd>, you'll see something similiar to this:
+To jest normalna, w pełni działąjąca strona WWW (która wykorzystuje HTML, CSS i JavaScript). Nawet pomimo faktu, że jeśli naciśniesz <kbd>Ctrl</kbd>+<kbd>U</kbd>, by wyświetlić źródło strony, zobaczysz coś podobnego do tego:
 
-![My Image](README-source.jpg)
+![Kod źródłowy strony](README-source.jpg)
 
-as a source.
+Czyli kompletne bagno.
 
-## DISCLAIMER
+## UWAGI KOŃCOWE
 
-The example HTML code used in here is based on [Pure](https://purecss.io/).
+Przykładowa strona WWW (powyżej) jest oparta na [Pure](https://purecss.io/).
 
-We have used the [`pure/site/static/layouts/side-menu/`](https://github.com/pure-css/pure/tree/master/site/static/layouts/side-menu) example and changed it the way that it includes each and every required external file embed directly into [`index.html`](https://github.com/telecare-poland/test-algorytmu-lzf/blob/main/source/side-menu-oneliner/index.html). Then the contents of this file were base64-encoded (using [Base64 Converter](https://base64.guru/converter)) and replaced content of the [`views\site\index.php`](https://github.com/telecare-poland/test-algorytmu-lzf/blob/main/views/site/index.php) file.
+Użyty został przykład z folderu [`pure/site/static/layouts/side-menu/`](https://github.com/pure-css/pure/tree/master/site/static/layouts/side-menu). Dokonano jedynie drobnej zmiany, polegającej na tym, że każdy wymagany zewnętrzny plik został osadzony bezpośrednio w pliku [`index.html`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/source/side-menu-oneliner/index.html). Zawartość gotowego pliku została następnie zakodowana (przy użyciu [Base64 Converter](https://base64.guru/converter)) i umieszczona w pliku [`views\site\index.php`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/views/site/index.php).
 
-The source (both original and changed into one-liner) is put into [`source`](https://github.com/telecare-poland/test-algorytmu-lzf/tree/main/source) folder.
+Wykorzystane źródła (zarówno wersja oryginalna, jak i przerobiona do _jedno-linijkowca_) znajdują się w folderze [`source`](https://github.com/telecare-poland/test-algorytmu-base64/tree/main/source) w tym repozytorium.
