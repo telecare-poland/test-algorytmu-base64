@@ -1,23 +1,30 @@
-Niniejszy plik _README_ został przetłumaczony na język polski dla wygody użytkowników. Jednak wszystkie strony internetowe, do których odnośniki zawiera, są w języku angielskim. [Licencja](LICENSE.md) też jest po angielsku. Przynajmniej podstawowa znajomość języka angielskiego jest niezbędna, by zainstalować i korzystać z tego pakietu.
+Niniejszy plik _README_ został przetłumaczony na język polski dla wygody użytkowników. Jednak wszystkie strony
+internetowe, do których odnośniki zawiera, są w języku angielskim. [Licencja](LICENSE.md) też jest po angielsku.
+Przynajmniej podstawowa znajomość języka angielskiego jest niezbędna, by zainstalować i korzystać z tego pakietu.
 
-(_The README file has been translated into Polish for the convenience of users. However, all websites it links to are in English. [License file](LICENSE.md)  is also in English. At least a basic knowledge of English is required to install and use of this package_)
+(_The README file has been translated into Polish for the convenience of users. However, all websites it links to are in
+English. The [license file](LICENSE.md) is also in English. At least a basic knowledge of English is required to install
+and use of this package_)
 
 <p align="center">
-    <img src="https://avatars.githubusercontent.com/u/130758995?s=210&u=bf8fc37c7efd14d4555f54879cf1869bbc542937&v=4">
+    <img src="https://github.com/telecare-poland/test-algorytmu-base64/blob/main/LOGO.png">
     <h1 align="center">Pseudo-Enkoder PHP</h1>
 </p>
 
+## PROJEKT
+
 Inspiracja:
 
-- [IonCube / PHP Encoder 12](https://www.ioncube.com/php_encoder.php?page=pricing), 
+- [IonCube / PHP Encoder 12](https://www.ioncube.com/php_encoder.php?page=pricing),
 - [Adminer](https://www.adminer.org/en/) (częściowe kodowanie głównego pliku)
 
 Pomysł wykorzystuje:
 
-- [Yii 2 Micro Framework](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-yii-as-micro-framework) 
+- [Yii 2 Micro Framework](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-yii-as-micro-framework)
 - oraz bibliotekę [LZ-based compression algorithm for JavaScript](https://github.com/pieroxy/lz-string/).
 
-Idea polega na tym, by przeglądarka wyświetlała użytkownikowi w pełni funkcjonalną stronę WWW (z pełnym stylowaniem opartym o CSS i działającą logiką, opartą na JavaScript), jednocześnie zawierając "bagno" w kodzie źródłowym.
+Idea polega na tym, by przeglądarka wyświetlała użytkownikowi w pełni funkcjonalną stronę WWW (z pełnym stylowaniem
+opartym o CSS i działającą logiką, opartą na JavaScript), jednocześnie zawierając "bagno" w kodzie źródłowym.
 
 Dodatkowym założeniem jest, żeby wszystko było zbudowane na _one-linerze_, czyli zawarte w jednym pliku.
 
@@ -25,31 +32,37 @@ Dodatkowym założeniem jest, żeby wszystko było zbudowane na _one-linerze_, c
 
 Poniższe komponenty są wymagane i muszą zostać zainstalowane (jeśli już ich nie posiadasz):
 
-1. Lokalny serwer webowy typu LAMP. [XAMPP](https://www.apachefriends.org/index.html) jest polecany. Ewentualnie samodzielny interpreter języka PHP.
+1. Lokalny serwer webowy typu LAMP, np. [XAMPP](https://www.apachefriends.org/index.html). Ewentualnie samodzielny
+   interpreter języka PHP w wersji minimum **8.0.0**.
 2. System kontroli zależności [Composer](http://getcomposer.org/).
 3. [Git dla Windows](https://gitforwindows.org/).
 4. Dowolna przeglądarka internetowa we w miarę nowej wersji.
 
 Rozwiązanie było testowane wyłącznie w systemie **Windows 11 Pro**, pod kontrolą **PHP 8.2.4**.
 
-## Instalacja
+## INSTALACJA
 
-### XAMPP
+### Instalacja XAMPPa
 
-Jeśli nie posiadasz zainstalowanego [XAMPPa](https://www.apachefriends.org/index.html), lub dowolnego innego pakietu serwerowego typu LAMP, możesz pobrać i zainstalować go ze strony internetowej [ApacheFriends.org](https://www.apachefriends.org/download.html).
+Jeśli nie posiadasz zainstalowanego [XAMPPa](https://www.apachefriends.org/index.html), lub dowolnego innego pakietu
+serwerowego typu LAMP, możesz pobrać i zainstalować go ze strony
+internetowej [ApacheFriends.org](https://www.apachefriends.org/download.html).
 
-Jeśli wybierzesz gałąź 8.1 lub 8.0, konieczne będzie użycie flagi `--ignore-platform-req=php` przy korzystaniu z Composera, jak to opisano poniżej i [tutaj](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
+Jeśli wybierzesz gałąź 8.1 lub 8.0, konieczne będzie użycie flagi `--ignore-platform-req=php` przy korzystaniu z
+Composera, jak to opisano poniżej
+i [tutaj](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
 
-### Git for Windows
+### Instalacja Git for Windows
 
-Jeśli nie masz jeszcze [Git for Windows](https://gitforwindows.org/) lub innej wersji gita, możesz pobrać go z ich [strony głównej](https://gitforwindows.org/).
+Jeśli nie masz jeszcze [Git for Windows](https://gitforwindows.org/) lub innej wersji gita, możesz pobrać go z
+ich [strony głównej](https://gitforwindows.org/).
 
-### Composer
+### Instalacja Composera
 
 Jeśli nie posiadasz [Composera](http://getcomposer.org/), instrukcje instalacji znajdziesz na stronie WWW
- [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
+[getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
-### Pobierz projekt przy pomocy Gita i Composer
+### Instalacja projektu przy pomocy Gita i Composera
 
 Wykonaj poniższe polecenia w konsoli Windows:
 
@@ -58,7 +71,8 @@ git clone git@github.com:telecare-poland/test-algorytmu-base64.git
 composer update --ignore-platform-req=php
 ~~~
 
-Flaga `--ignore-platform-req=php` musi być użyta tylko, jeśli masz zainstalowane [PHP w wersji 8.2 lub nowszej](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
+Flaga `--ignore-platform-req=php` musi być użyta tylko, jeśli masz
+zainstalowane [PHP w wersji 8.2 lub nowszej](https://forum.yiiframework.com/t/current-version-of-yii-2-not-ready-for-php-8-2/135156/2?u=trejder).
 
 ## URUCHOMIENIE
 
@@ -90,7 +104,8 @@ Na coś takiego:
 
 (kod base64 musi być wklejony w _jednej linijce_)
 
-Zapisz zmiany w pliku `views/site/index.php`, wróć do przeglądarki i odśwież stronę [`http://localhost:8080`](http://localhost:8080).
+Zapisz zmiany w pliku `views/site/index.php`, wróć do przeglądarki i odśwież
+stronę [`http://localhost:8080`](http://localhost:8080).
 
 ## PRZYKŁAD
 
@@ -98,7 +113,8 @@ Jeśli wszystko poszło zgodnie z planem, w przeglądarce powinna pojawić się 
 
 ![Wynik działania](README-effect.jpg)
 
-To jest normalna, w pełni działąjąca strona WWW (która wykorzystuje HTML, CSS i JavaScript). Nawet pomimo faktu, że jeśli naciśniesz <kbd>Ctrl</kbd>+<kbd>U</kbd>, by wyświetlić źródło strony, zobaczysz coś podobnego do tego:
+To jest normalna, w pełni działąjąca strona WWW (która wykorzystuje HTML, CSS i JavaScript). Nawet pomimo faktu, że
+jeśli naciśniesz <kbd>Ctrl</kbd>+<kbd>U</kbd>, by wyświetlić źródło strony, zobaczysz coś podobnego do tego:
 
 ![Kod źródłowy strony](README-source.jpg)
 
@@ -108,8 +124,14 @@ Czyli kompletne bagno.
 
 Przykładowa strona WWW (powyżej) jest oparta na [Pure](https://purecss.io/).
 
-Wykorzystano przykład z folderu [`pure/site/static/layouts/side-menu/`](https://github.com/pure-css/pure/tree/master/site/static/layouts/side-menu). Dokonano jedynie zmiany, polegającej na tym, że każdy wymagany zewnętrzny plik został osadzony bezpośrednio w pliku [`index.html`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/source/side-menu-oneliner/index.html).
+Wykorzystano przykład z
+folderu [`pure/site/static/layouts/side-menu/`](https://github.com/pure-css/pure/tree/master/site/static/layouts/side-menu).
+Dokonano jedynie zmiany, polegającej na tym, że każdy wymagany zewnętrzny plik został osadzony bezpośrednio w
+pliku [`index.html`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/source/side-menu-oneliner/index.html).
 
-Treść strony została następnie zakodowana (przy użyciu [Base64 Converter](https://base64.guru/converter)) i umieszczona w pliku [`views\site\index.php`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/views/site/index.php).
+Treść strony została następnie zakodowana (przy użyciu [Base64 Converter](https://base64.guru/converter)) i umieszczona
+w
+pliku [`views\site\index.php`](https://github.com/telecare-poland/test-algorytmu-base64/blob/main/views/site/index.php).
 
-Wykorzystane źródła (wersja oryginalna i przerobiona do _jedno-linijkowca_) są w folderze [`source`](https://github.com/telecare-poland/test-algorytmu-base64/tree/main/source) w tym repozytorium.
+Wykorzystane źródła (wersja oryginalna i przerobiona do _jedno-linijkowca_) są w
+folderze [`source`](https://github.com/telecare-poland/test-algorytmu-base64/tree/main/source) w tym repozytorium.
