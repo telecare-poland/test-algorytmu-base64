@@ -7,6 +7,8 @@ assignees: trejder
 
 ---
 
+Tak w 1-2 zdaniach ujęcie całości.
+
 ### Niezbędne kroki
 
 1. Idź do _raz_ → _dwa_ → _trzy_.
